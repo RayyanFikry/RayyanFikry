@@ -1,37 +1,44 @@
-# 👋 Hi, I'm Rayyan Fikry
+# 🧠 Rayyan Fikry
 
-I'm a fifth-semester **Data Science student** passionate about exploring data, building models, and turning insights into action.  
-This repository showcases my academic projects and personal learning journey across various data-related fields — from **Machine Learning** and **Deep Learning**, to **Model Deployment**, **Human-Computer Interaction**, and **Survey & Sampling Methods**.
-
----
-
-## 📂 My Academic Portfolio
-
-### 🎯 Semester 3
-- **Machine Learning**
-  - [UAS Projects](Semester_3/Machine_Learning) — 3 notebooks exploring supervised and unsupervised learning tasks.
-
-### 🧠 Semester 4
-- **Deep Learning**
-  - [UTS & UAS Projects](Semester_4/Deep_Learning)
-  - [Final Project](Semester_4/Deep_Learning/Final_Project) — includes Jupyter notebooks, PDF report, and video explanation.
-- **Model Deployment**
-  - [UTS Projects](Semester_4/Model_Deployment/UTS)
-  - [UAS Projects](Semester_4/Model_Deployment/UAS)
-- **Human Computer Interaction**
-  - [Individual Project](Semester_4/Human_Computer_Interaction/Individual_Project)
-  - [Group Project](Semester_4/Human_Computer_Interaction/Group_Project)
-- **Survey and Sampling Method**
-  - [Final Project](Semester_4/Survey_and_Sampling_Method/Project_Final)
+🎓 *Undergraduate Student in Data Science*  
+📍 *Focused on Machine Learning, Deep Learning, and Data-Driven Systems*
 
 ---
 
-## 🧩 Skills
-**Languages:** Python, R  
-**Tools:** Jupyter Notebook, RStudio, Streamlit  
-**Soft Skills:** Public Speaking, Communication, Teamwork  
+## 👋 About Me
+Hello! I'm **Rayyan Fikry**, a Data Science undergraduate with a strong interest in how data, mathematics, and computation can be combined to solve real-world problems.  
+I enjoy working on projects related to **machine learning, model deployment, and data analysis**, and I’m continuously improving my technical and analytical skills through various academic projects.
+
+This repository serves as a **comprehensive portfolio** of my coursework and projects throughout my studies — including topics in machine learning, deep learning, model deployment, statistics, and human-computer interaction.
 
 ---
 
-## 🌐 Connect with Me
-[LinkedIn](https://www.linkedin.com/in/rayyanfikry) • [Email](mailto:your-email@example.com)
+## 🧰 Tech Stack
+**Languages:** Python, R, C, SQL, HTML, CSS, JavaScript  
+**Tools & Frameworks:** Jupyter Notebook, TensorFlow, scikit-learn, Streamlit, Pandas, NumPy, Matplotlib, Git, GitHub  
+
+---
+
+## 📂 Academic Project Portfolio
+
+| Course | Description |
+|--------|--------------|
+| [**Machine Learning**](./Machine_Learning) | Projects focusing on supervised and unsupervised learning, including Random Forest and XGBoost model development, hyperparameter tuning, and feature importance analysis. |
+| [**Deep Learning**](./Deep_Learning) | Projects applying neural network architectures such as CNN, LSTM, and Autoencoder for image and time-series prediction tasks. |
+| [**Model Deployment**](./Model_Deployment) | End-to-end deployment of machine learning models using Streamlit, transforming trained models into interactive web applications. |
+| [**Human Computer Interaction**](./Human_Computer_Interaction) | Research and practical design projects on user interaction, collaboration, and usability principles in technology interfaces. |
+| [**Survey and Sampling Method**](./Survey_and_Sampling_Method) | Statistical analysis projects focusing on sampling techniques, estimation, and design effects, using real-world data. |
+
+---
+
+## 📫 Contact
+Feel free to reach out for collaboration or discussion!
+
+- **Email (personal):** [rayyanfikry587@gmail.com](mailto:rayyanfikry587@gmail.com)  
+- **Email (academic):** [rayyan@binus.ac.id](mailto:rayyan@binus.ac.id)  
+- **LinkedIn:** [Rayyan Fikry](https://www.linkedin.com/in/rayyan-fikry-b55559294/)  
+- **GitHub:** [RayyanFikry](https://github.com/RayyanFikry)
+
+---
+
+⭐ *Thank you for visiting my portfolio! I’m always open to learning new things and collaborating on data-driven projects.*
