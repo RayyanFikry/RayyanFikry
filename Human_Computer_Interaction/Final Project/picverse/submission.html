@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Artwork - Picverse</title>
+    <meta name="description" content="Share your creativity with the Picverse community by submitting your digital artwork.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🎨</div>
+                    Picverse
+                </a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="submission.html" class="active">Submit</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span>☰</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Submission Content -->
+    <main style="background: #f8f9fa; min-height: 100vh; padding: 2rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h1>Submit Your Artwork</h1>
+                <p>Share your creativity with the Picverse community</p>
+            </div>
+
+            <div class="form-container">
+                <h2 style="margin-bottom: 2rem; color: #333;">Artwork Submission Form</h2>
+                
+                <form id="submissionForm">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <!-- Title Input -->
+                    <div class="form-group">
+                        <label for="title">Artwork Title *</label>
+                        <input type="text" id="title" name="title" placeholder="Enter your artwork title" required>
+                    </div>
+
+                    <!-- Description Textarea -->
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" rows="4" 
+                                  placeholder="Describe your artwork, inspiration, techniques used..." required></textarea>
+                    </div>
+
+                    <!-- Tags Input -->
+                    <div class="form-group">
+                        <label for="tags">Tags *</label>
+                        <input type="text" id="tags" name="tags" 
+                               placeholder="digital art, fantasy, character design (separate with commas)" required>
+                        <small style="color: #666; font-size: 0.9rem;">Separate tags with commas (max 10 tags)</small>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="form-group">
+                        <label for="file">Upload Artwork *</label>
+                        <div class="file-upload">
+                            <input type="file" id="file" name="file" accept="image/*" required>
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">📁</div>
+                            <div>
+                                <span style="color: #8b5cf6; font-weight: 500;">Click to upload</span>
+                                <span style="color: #666;"> or drag and drop</span>
+                            </div>
+                            <small style="color: #666; margin-top: 0.5rem; display: block;">
+                                PNG, JPG, GIF, WebP up to 10MB
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- AI Generated Radio Group -->
+                    <div class="form-group">
+                        <label>Is this artwork AI-generated? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="ai-yes" name="aiGenerated" value="yes" required>
+                                <label for="ai-yes">Yes, it's AI-generated</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="ai-no" name="aiGenerated" value="no" required>
+                                <label for="ai-no">No, it's original artwork</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
+                        Submit Artwork
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🎨</div>
+                        Picverse
+                    </a>
+                    <p style="margin: 1rem 0; color: #d1d5db;">
+                        The ultimate community platform for digital artists to share, connect, and grow together.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="submission.html">Submit Art</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Updated</h3>
+                    <p style="color: #d1d5db; margin-bottom: 1rem;">
+                        Subscribe to our newsletter for the latest updates and featured artworks.
+                    </p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="Enter your email" 
+                               style="flex: 1; padding: 0.5rem; background: #374151; border: 1px solid #4b5563; border-radius: 4px 0 0 4px; color: white;">
+                        <button style="padding: 0.5rem 1rem; background: #8b5cf6; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Picverse Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

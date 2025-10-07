@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picverse - Digital Art Community Platform</title>
+    <meta name="description" content="A community platform for digital artists to share their work, interact with the community, and get recognized for their creativity.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🎨</div>
+                    Picverse
+                </a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="submission.html">Submit</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span>☰</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Image Slideshow -->
+    <section class="hero">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img src="assets/dp4.avif" alt="Digital Art Background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img src="assets/aa2.avif" alt="Creative Art Background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Where Creativity Meets Community</h1>
+            <h2>Discover Amazing Digital Art</h2>
+            <p>Featured Artist: Alina Grubnyak</p>
+            <a href="gallery.html" class="btn btn-primary hero-btn">Explore Gallery</a>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="hero-nav hero-prev">‹</button>
+        <button class="hero-nav hero-next">›</button>
+        
+        <!-- Slide Indicators -->
+        <div class="hero-indicators">
+            <button class="hero-indicator active"></button>
+            <button class="hero-indicator"></button>
+        </div>
+    </section>
+
+    <!-- Trending Tags Section -->
+    <section class="section trending-tags">
+        <div class="container">
+            <div class="section-title">
+                <h2>🔥 Trending Tags</h2>
+                <p>Discover what's popular in the community</p>
+            </div>
+            
+            <div class="tags-grid">
+                <div class="tag-card">
+                    <strong>Digital Painting</strong>
+                </div>
+                <div class="tag-card">
+                    <strong>Abstract Art</strong>
+                </div>
+                <div class="tag-card">
+                    <strong>Character Design</strong>
+                </div>
+                <div class="tag-card">
+                    <strong>Landscape</strong>
+                </div>
+                <div class="tag-card">
+                    <strong>Portrait</strong>
+                </div>
+                <div class="tag-card">
+                    <strong>Concept Art</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artworks Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Artworks</h2>
+                <p>Showcasing the best from our community</p>
+            </div>
+            
+            <div class="artworks-grid">
+                <!-- Artwork 1 -->
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="assets/fa1.avif" alt="Street Mural">
+                        <div class="artwork-overlay"></div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Street Mural</h3>
+                        <p class="artist">by Johannes Stevenson</p>
+                        <div class="artwork-likes">
+                            <span>♥</span>
+                            <span>189</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 2 -->
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="assets/fa2.avif" alt="lights in Closed Space">
+                        <div class="artwork-overlay"></div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>lights in Closed Space</h3>
+                        <p class="artist">by Chloe Strauss</p>
+                        <div class="artwork-likes">
+                            <span>♥</span>
+                            <span>163</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 3 -->
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="assets/dp1.avif" alt="Van Gogh Self Portrait">
+                        <div class="artwork-overlay"></div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Van Gogh Self Portrait</h3>
+                        <p class="artist">by Alina Grubnyak</p>
+                        <div class="artwork-likes">
+                            <span>♥</span>
+                            <span>348</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 4 -->
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="assets/fa4.avif" alt="Power of Colors">
+                        <div class="artwork-overlay"></div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Power of Colors</h3>
+                        <p class="artist">by Jasmine Paris</p>
+                        <div class="artwork-likes">
+                            <span>♥</span>
+                            <span>215</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artwork 5 -->
+                <div class="artwork-card">
+                    <div class="artwork-image">
+                        <img src="assets/fa5.avif" alt="Modern Abstract Concrete">
+                        <div class="artwork-overlay"></div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>Modern Abstract Concrete</h3>
+                        <p class="artist">by Mills Heager</p>
+                        <div class="artwork-likes">
+                            <span>♥</span>
+                            <span>74</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🎨</div>
+                        Picverse
+                    </a>
+                    <p style="margin: 1rem 0; color: #d1d5db;">
+                        The ultimate community platform for digital artists to share, connect, and grow together.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="submission.html">Submit Art</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="footer-section">
+                    <h3>Stay Updated</h3>
+                    <p style="color: #d1d5db; margin-bottom: 1rem;">
+                        Subscribe to our newsletter for the latest updates and featured artworks.
+                    </p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="Enter your email" 
+                               style="flex: 1; padding: 0.5rem; background: #374151; border: 1px solid #4b5563; border-radius: 4px 0 0 4px; color: white;">
+                        <button style="padding: 0.5rem 1rem; background: #8b5cf6; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Picverse Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

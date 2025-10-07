@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Picverse</title>
+    <meta name="description" content="Explore amazing artworks from our talented community of digital artists.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .artwork-detail {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .artwork-detail-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        
+        .artwork-detail-info {
+            padding: 0 20px;
+        }
+        
+        .artwork-detail-title {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .artwork-detail-artist {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        
+        .artwork-detail-description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .artwork-detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .artwork-detail-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .artwork-detail-meta-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .artwork-detail-meta-value {
+            font-weight: 500;
+        }
+        
+        /* Make artwork cards clickable */
+        .artwork-card {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .artwork-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Style for non-clickable artwork items */
+        .artwork-item {
+            cursor: default;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        @media (min-width: 768px) {
+            .artwork-detail {
+                flex-direction: row;
+            }
+            
+            .artwork-detail-image {
+                width: 50%;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🎨</div>
+                    Picverse
+                </a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="submission.html">Submit</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span>☰</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Content -->
+    <main style="background: #f8f9fa; min-height: 100vh; padding: 2rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h1>Art Gallery</h1>
+                <p>Explore amazing artworks from our talented community</p>
+            </div>
+
+            <!-- Character Design Section -->
+            <div class="gallery-section">
+                <h2>Character Design</h2>
+                <div class="artworks-grid">
+                    <!-- KEEP POPUP for first one -->
+                    <div class="artwork-card" data-id="cd1">
+                        <div class="artwork-image">
+                            <img src="assets/cd1.avif" alt="Pink Gnome">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Pink Gnome</h3>
+                            <p class="artist">by Tanya Yarosh</p>
+                        </div>
+                    </div>
+                    
+                    <!-- REMOVE POPUP for others -->
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/cd2.avif" alt="Kenny Whellsper">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Kenny Wheelsper</h3>
+                            <p class="artist">by Galina Nelyubova</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/cd3.avif" alt="Wigloo">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Wigloo</h3>
+                            <p class="artist">by Zyanya Citlali</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/cd4.avif" alt="Bloop">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Bloop</h3>
+                            <p class="artist">by Mariia Shalabaivea</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/cd5.avif" alt="Stziplly">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Stziplly</h3>
+                            <p class="artist">by Phillip Oroni</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Paintings Section -->
+            <div class="gallery-section">
+                <h2>Digital Paintings</h2>
+                <div class="artworks-grid">
+                    <!-- KEEP POPUP for first one -->
+                    <div class="artwork-card" data-id="dp1">
+                        <div class="artwork-image">
+                            <img src="assets/dp1.avif" alt="Van Gogh Selgf Potrait">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Van Gogh Self Potrait</h3>
+                            <p class="artist">by Alina Grubnyak</p>
+                        </div>
+                    </div>
+                    
+                    <!-- REMOVE POPUP for others -->
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/dp2.avif" alt="12th Century Angel">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>12th Century Angel</h3>
+                            <p class="artist">by Diogo Nunes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/dp3.avif" alt="Wise of Choice">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Wise of Choice</h3>
+                            <p class="artist">by Tim Arterbury</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/dp4.avif" alt="Stonehenge">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Stonehenge</h3>
+                            <p class="artist">by Alina Grubnyak</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/dp5.avif" alt="Grunge Texture">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Grunge Texture</h3>
+                            <p class="artist">by Benoit Deschasaux</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abstract Art Section -->
+            <div class="gallery-section">
+                <h2>Abstract Art</h2>
+                <div class="artworks-grid">
+                    <!-- KEEP POPUP for first one -->
+                    <div class="artwork-card" data-id="aa1">
+                        <div class="artwork-image">
+                            <img src="assets/aa1.avif" alt="Liquid Paint">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Liquid Paint</h3>
+                            <p class="artist">by Susan Wilkinson</p>
+                        </div>
+                    </div>
+                    
+                    <!-- REMOVE POPUP for others -->
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/aa2.avif" alt="Culture of Goa's">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Culture of Goa's</h3>
+                            <p class="artist">by Mayur Deshpande</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/aa3.avif" alt="Swedish House in Blue">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Swedish House in Blue</h3>
+                            <p class="artist">by Fons Heinjsbroek</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/aa4.avif" alt="Acrylic Paintings">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Acrilyc Paintings</h3>
+                            <p class="artist">by Paul Blenkhorn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artwork-item">
+                        <div class="artwork-image">
+                            <img src="assets/aa5.avif" alt="Fluid Motions">
+                            <div class="artwork-overlay"></div>
+                        </div>
+                        <div class="artwork-info">
+                            <h3>Fluid Motions</h3>
+                            <p class="artist">by Steve Johnson</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Artwork Details -->
+    <div id="artworkModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="artwork-detail">
+                <img src="/placeholder.svg" alt="" class="artwork-detail-image">
+                <div class="artwork-detail-info">
+                    <h2 class="artwork-detail-title"></h2>
+                    <p class="artwork-detail-artist"></p>
+                    <div class="artwork-detail-description"></div>
+                    <div class="artwork-detail-meta">
+                        <div class="artwork-detail-meta-item">
+                            <span class="artwork-detail-meta-label">Created</span>
+                            <span class="artwork-detail-meta-value artwork-date"></span>
+                        </div>
+                        <div class="artwork-detail-meta-item">
+                            <span class="artwork-detail-meta-label">Medium</span>
+                            <span class="artwork-detail-meta-value artwork-medium"></span>
+                        </div>
+                        <div class="artwork-detail-meta-item">
+                            <span class="artwork-detail-meta-label">Category</span>
+                            <span class="artwork-detail-meta-value artwork-category"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🎨</div>
+                        Picverse
+                    </a>
+                    <p style="margin: 1rem 0; color: #d1d5db;">
+                        The ultimate community platform for digital artists to share, connect, and grow together.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="submission.html">Submit Art</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Updated</h3>
+                    <p style="color: #d1d5db; margin-bottom: 1rem;">
+                        Subscribe to our newsletter for the latest updates and featured artworks.
+                    </p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="Enter your email" 
+                               style="flex: 1; padding: 0.5rem; background: #374151; border: 1px solid #4b5563; border-radius: 4px 0 0 4px; color: white;">
+                        <button style="padding: 0.5rem 1rem; background: #8b5cf6; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Picverse Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script>
+        // Artwork data
+        const artworks = {
+            cd1: {
+                title: "Pink Gnome",
+                artist: "Tanya Yarosh",
+                image: "assets/cd1.avif",
+                description: "This whimsical character design showcases a pink gnome with a playful personality. The artist has created a charming fantasy creature with attention to detail in the costume and facial expression, bringing this imaginative character to life.",
+                date: "March 15, 2024",
+                medium: "Digital Illustration",
+                category: "Character Design"
+            },
+            dp1: {
+                title: "Van Gogh Self Portrait",
+                artist: "Alina Grubnyak",
+                image: "assets/dp1.avif",
+                description: "A digital reinterpretation of Van Gogh's famous self-portrait. The artist has captured the essence of Van Gogh's distinctive style while adding a contemporary digital twist, showcasing the timeless nature of the original masterpiece.",
+                date: "January 20, 2024",
+                medium: "Digital Painting",
+                category: "Portrait"
+            },
+            aa1: {
+                title: "Liquid Paint",
+                artist: "Susan Wilkinson",
+                image: "assets/aa1.avif",
+                description: "This mesmerizing abstract piece explores the fluid dynamics of paint. The artist has created a captivating interplay of colors that seem to flow and merge organically, inviting viewers to lose themselves in the hypnotic patterns and movements.",
+                date: "February 8, 2024",
+                medium: "Digital Art",
+                category: "Abstract"
+            }
+        };
+
+        // Modal functionality
+        const modal = document.getElementById("artworkModal");
+        const closeModal = document.querySelector(".close-modal");
+        const artworkCards = document.querySelectorAll(".artwork-card");
+        
+        // Open modal when clicking on artwork
+        artworkCards.forEach(card => {
+            card.addEventListener("click", function() {
+                const artworkId = this.getAttribute("data-id");
+                const artwork = artworks[artworkId];
+                
+                if (artwork) {
+                    // Populate modal with artwork details
+                    document.querySelector(".artwork-detail-image").src = artwork.image;
+                    document.querySelector(".artwork-detail-image").alt = artwork.title;
+                    document.querySelector(".artwork-detail-title").textContent = artwork.title;
+                    document.querySelector(".artwork-detail-artist").textContent = "by " + artwork.artist;
+                    document.querySelector(".artwork-detail-description").textContent = artwork.description;
+                    document.querySelector(".artwork-date").textContent = artwork.date;
+                    document.querySelector(".artwork-medium").textContent = artwork.medium;
+                    document.querySelector(".artwork-category").textContent = artwork.category;
+                    
+                    // Show modal
+                    modal.style.display = "block";
+                    document.body.style.overflow = "hidden"; // Prevent scrolling
+                }
+            });
+        });
+        
+        // Close modal when clicking on X
+        closeModal.addEventListener("click", function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling
+        });
+        
+        // Close modal when clicking outside of it
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Enable scrolling
+            }
+        });
+    </script>
+</body>
+</html>
