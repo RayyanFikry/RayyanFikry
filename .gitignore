@@ -1,0 +1,27 @@
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore temporary or cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ignore dataset folders if large
+dataset_large/
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Ignore model and video files that are too big
+*.pkl
+*.h5
+*.mp4
+*.avi
+*.mov
+
+# Ignore hidden OS files
+.DS_Store
+Thumbs.db
