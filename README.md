@@ -11,4 +11,4 @@ My academic projects cover predictive modeling, computer vision, time-series for
 
 📫 Contact  
 Email: rayyanfikryy@gmail.com  
-LinkedIn: https://www.linkedin.com/in/rayyan-fikry-b55559294/
+LinkedIn: https://www.linkedin.com/in/rayyan-fikry
